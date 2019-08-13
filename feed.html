@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Full Instagram Project Feed</title>
+        <title>Full Instagram Project</title>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,17 +15,23 @@
 
 
 
-<body style="background: lightgray">
+<body class="bg-light">
 
-<!-- header -->
+<nav class="container-fluid sticky-top bg-light">
 
-<header >
-    <div class="container-fluid">
-        <div class="row">
-            <img  class="logo-left col-xs-12 col-sm-5 col-md-3 offset-md-1  " src="instagram-logo.png">
+ <!--logo-->
+
+  <div class="row justify-content-around">
+
+    <div class="icon pr-5 pt-3">
+        <i style="color:gray;" class="icono fab fa-instagram fa-5x d-flex"><p style="font-family: billabong; font-size:70px;"class="pl-3 pt-4">Instagram</p></i>
+    </div>
+
+        <nav class=" pr-5 navbar navbar-expand-lg navbar-light ">
 
 <!-- Button trigger modal -->
-<div class=" offset-md-3" style="margin-top: 50px;">
+
+<div class="pt-4 pl-5">
 <button type="button" style=" margin: 10px;" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   Create a new post
 </button>
@@ -43,7 +49,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <i style="font-size: 40px; border: solid lightgray 1px;" class="fas fa-camera"></i> <i style="font-size: 40px; border: solid lightgray 1px; margin-left: 10px;" class="fas fa-map-marker-alt"></i>
+        <i style="font-size: 40px; " class="fas fa-camera"></i> <i style="font-size: 40px; margin-left: 10px;" class="fas fa-map-marker-alt"></i>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -53,22 +59,35 @@
   </div>
 </div>
 
-<!-- dropMenu -->
+<!--drop down-->
 
-<div class="dropdown" style="margin-top: 60px;">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <i class="fas fa-cog"></i>
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <a class="border-top dropdown-item" href="#">Log Out</a>
-  </div>
-</div>
-        </div>
+<button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+</button>
+
+            <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+
+                  <li class=" pt-4 nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-cog"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                  </li>
+
+                </ul>
+
+            </div>
+        </nav>
     </div>
-</header>
+</nav>
+
 
 <!--pictutre bar-->
 
@@ -87,256 +106,248 @@
 <!--photo feed-->
 <!--container1-->
 
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
+<div class="container">
 
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic1.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
+    <div class="row justify-content-center">
 
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
+        <div class="card border-0" style="width: 38rem;">
+            <div class=" d-flex justify-content-between">
+                 <div class="ml-3">
+                     <h1>My first photo</h1>
+                 </div>
+                 <div class="mr-3 pt-3">
+                     <p>12/14</p>
+                 </div>
+            </div>
 
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
+            <img src="pic1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+                    <h5 class="card-title">2500000 likes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam aliquid, qui. Natus quae sapiente cupiditate eligendi ut iusto, ullam, animi vitae reiciendis quidem earum soluta magnam? Molestias commodi dolores maxime!<content <cla></cla>ss=""></content></p>
+                <div class=" d-flex justify-content-between">
+                     <div class="row">
+                         <i class="pl-3 pt-1 far fa-heart fa-1x"></i>
+                         <p class="pl-3">Comments...</p>
+                     </div>
+                     <div class="pt-1">
+                         <i class="fas fa-ellipsis-v fa-1x"></i>
+                     </div>
+                </div>
+          </div>
+        </div>
     </div>
- </div><!--container2-->
+</div>
 
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
 
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic2.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
+<!--container2-->
 
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
+<div class="container pt-3">
 
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
+    <div class="row justify-content-center">
+
+        <div class="card border-0" style="width: 38rem;">
+            <div class=" d-flex justify-content-between">
+                 <div class="ml-3">
+                     <h1>My first photo</h1>
+                 </div>
+                 <div class="mr-3 pt-3">
+                     <p>12/14</p>
+                 </div>
+            </div>
+
+            <img src="pic2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+                    <h5 class="card-title">2500000 likes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam aliquid, qui. Natus quae sapiente cupiditate eligendi ut iusto, ullam, animi vitae reiciendis quidem earum soluta magnam? Molestias commodi dolores maxime!<content <cla></cla>ss=""></content></p>
+                <div class=" d-flex justify-content-between">
+                     <div class="row">
+                         <i class="pl-3 pt-1 far fa-heart fa-1x"></i>
+                         <p class="pl-3">Comments...</p>
+                     </div>
+                     <div class="pt-1">
+                         <i class="fas fa-ellipsis-v fa-1x"></i>
+                     </div>
+                </div>
+          </div>
+        </div>
     </div>
- </div><!--container3-->
+</div>
 
-<br>
-<div class="container" style="background: white; width: 600px;">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Video</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
 
-    <div class="row">
-            <video autoplay loop class="col">
-            <source src="Pexels%20Videos%201390942.mp4">
-        </video>
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
+<!--container3-->
 
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
+<div class="container pt-3">
 
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
+    <div class="row justify-content-center">
+
+        <div class="card border-0" style="width: 38rem;">
+            <div class=" d-flex justify-content-between">
+                 <div class="ml-3">
+                     <h1>My first photo</h1>
+                 </div>
+                 <div class="mr-3 pt-3">
+                     <p>12/14</p>
+                 </div>
+            </div>
+
+            <img src="pic3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+                    <h5 class="card-title">2500000 likes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam aliquid, qui. Natus quae sapiente cupiditate eligendi ut iusto, ullam, animi vitae reiciendis quidem earum soluta magnam? Molestias commodi dolores maxime!<content <cla></cla>ss=""></content></p>
+                <div class=" d-flex justify-content-between">
+                     <div class="row">
+                         <i class="pl-3 pt-1 far fa-heart fa-1x"></i>
+                         <p class="pl-3">Comments...</p>
+                     </div>
+                     <div class="pt-1">
+                         <i class="fas fa-ellipsis-v fa-1x"></i>
+                     </div>
+                </div>
+          </div>
+        </div>
     </div>
- </div><!--container4-->
+</div>
 
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
 
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic4.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
+<!--container4-->
 
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
+<div class="container pt-3">
 
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
+    <div class="row justify-content-center">
+
+        <div class="card border-0" style="width: 38rem;">
+            <div class=" d-flex justify-content-between">
+                 <div class="ml-3">
+                     <h1>My first photo</h1>
+                 </div>
+                 <div class="mr-3 pt-3">
+                     <p>12/14</p>
+                 </div>
+            </div>
+
+            <img src="pic4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+                    <h5 class="card-title">2500000 likes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam aliquid, qui. Natus quae sapiente cupiditate eligendi ut iusto, ullam, animi vitae reiciendis quidem earum soluta magnam? Molestias commodi dolores maxime!<content <cla></cla>ss=""></content></p>
+                <div class=" d-flex justify-content-between">
+                     <div class="row">
+                         <i class="pl-3 pt-1 far fa-heart fa-1x"></i>
+                         <p class="pl-3">Comments...</p>
+                     </div>
+                     <div class="pt-1">
+                         <i class="fas fa-ellipsis-v fa-1x"></i>
+                     </div>
+                </div>
+          </div>
+        </div>
     </div>
- </div><!--container5-->
+</div>
 
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
 
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic5.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
+<!--container5-->
 
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
+<div class="container pt-3">
 
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
+    <div class="row justify-content-center">
+
+        <div class="card border-0" style="width: 38rem;">
+            <div class=" d-flex justify-content-between">
+                 <div class="ml-3">
+                     <h1>My first photo</h1>
+                 </div>
+                 <div class="mr-3 pt-3">
+                     <p>12/14</p>
+                 </div>
+            </div>
+
+            <img src="pic5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+                    <h5 class="card-title">2500000 likes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam aliquid, qui. Natus quae sapiente cupiditate eligendi ut iusto, ullam, animi vitae reiciendis quidem earum soluta magnam? Molestias commodi dolores maxime!<content <cla></cla>ss=""></content></p>
+                <div class=" d-flex justify-content-between">
+                     <div class="row">
+                         <i class="pl-3 pt-1 far fa-heart fa-1x"></i>
+                         <p class="pl-3">Comments...</p>
+                     </div>
+                     <div class="pt-1">
+                         <i class="fas fa-ellipsis-v fa-1x"></i>
+                     </div>
+                </div>
+          </div>
+        </div>
     </div>
- </div><!--container6-->
+</div>
 
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
 
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic6.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
+<!--container6-->
 
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
+<div class="container pt-3">
 
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
+    <div class="row justify-content-center">
+
+        <div class="card border-0" style="width: 38rem;">
+            <div class=" d-flex justify-content-between">
+                 <div class="ml-3">
+                     <h1>My first photo</h1>
+                 </div>
+                 <div class="mr-3 pt-3">
+                     <p>12/14</p>
+                 </div>
+            </div>
+
+            <img src="pic6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+                    <h5 class="card-title">2500000 likes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam aliquid, qui. Natus quae sapiente cupiditate eligendi ut iusto, ullam, animi vitae reiciendis quidem earum soluta magnam? Molestias commodi dolores maxime!<content <cla></cla>ss=""></content></p>
+                <div class=" d-flex justify-content-between">
+                     <div class="row">
+                         <i class="pl-3 pt-1 far fa-heart fa-1x"></i>
+                         <p class="pl-3">Comments...</p>
+                     </div>
+                     <div class="pt-1">
+                         <i class="fas fa-ellipsis-v fa-1x"></i>
+                     </div>
+                </div>
+          </div>
+        </div>
     </div>
- </div><!--container7-->
+</div>
 
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
 
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic7.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
+<!--container7-->
 
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
+<div class="container pt-3">
 
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
+    <div class="row justify-content-center">
+
+        <div class="card border-0" style="width: 38rem;">
+            <div class=" d-flex justify-content-between">
+                 <div class="ml-3">
+                     <h1>My first photo</h1>
+                 </div>
+                 <div class="mr-3 pt-3">
+                     <p>12/14</p>
+                 </div>
+            </div>
+
+            <img src="pic7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+                    <h5 class="card-title">2500000 likes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam aliquid, qui. Natus quae sapiente cupiditate eligendi ut iusto, ullam, animi vitae reiciendis quidem earum soluta magnam? Molestias commodi dolores maxime!<content <cla></cla>ss=""></content></p>
+                <div class=" d-flex justify-content-between">
+                     <div class="row">
+                         <i class="pl-3 pt-1 far fa-heart fa-1x"></i>
+                         <p class="pl-3">Comments...</p>
+                     </div>
+                     <div class="pt-1">
+                         <i class="fas fa-ellipsis-v fa-1x"></i>
+                     </div>
+                </div>
+          </div>
+        </div>
     </div>
- </div><!--container8-->
+</div>
 
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
-
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic8.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
-
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
-
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
-    </div>
- </div><!--container9-->
-
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
-
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic9.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
-
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
-
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
-    </div>
- </div><!--container10-->
-
-<br>
-<div class="container" style="background: white; width: 600px; ">
-    <div class="row">
-            <h1 class=" col-xs-2 col-md-6">My Firts Photo</h1>
-            <p class=" col-xs-2 col-md-6 d-flex justify-content-md-end" style="padding-top: 14px;">12/14</p>
-    </div><!--row-->
-
-    <div class="row">
-            <img style="padding: 0;" class=" col-xs-4 col-md-12" src="pic10.jpg">
-    </div><!--row-->
-    <br>
-    <div class="row">
-         <p class="col-md-12">23 likes</p>
-    </div><!--row-->
-
-    <div class="row">
-            <p class="col-md-12" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita non velit commodi, a, nulla consectetur dicta. Debitis dignissimos, illum, magnam, fugit at, consequatur doloremque corrupti deleniti amet exercitationem atque.</p>
-    </div><!--row-->
-
-    <div class="row">
-          <p class="col-xs-12 col-md-6"> <i class="far fa-heart"></i> Comments...</p>
-          <p class="col-xs-12 col-md-6 d-flex justify-content-md-end"><i class="fas fa-ellipsis-v"></i></p>
-    </div>
- </div><!--container11-->
 
 
 
